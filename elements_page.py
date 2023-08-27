@@ -5,6 +5,17 @@ from base_page import BasePage
 class TextPages(BasePage):
     locators = Locators()
 
+    def add_domain_driver(self):
+        expected_result = []
+        result = []
+
+        self.element_is_visible(self.locators.BUTTON_FAVORITE).click()
+        expected_result.append(self.element_is_visible(self.locators.NAME_FROM_TITLE).text)
+        self.element_is_visible(self.locators.FAVORITES_MENU).click()
+        result.append(self.element_is_visible(self.locators.FAVORITE_NAME).text)
+
+        return expected_result, result
+
     def add_from_search(self):
         search = ['самокаты', 'телефоны', 'одежда']
 
