@@ -1,6 +1,6 @@
 import pytest
 
-from elements_page import TextPages
+from pages.elements_page import TextPages
 
 
 class TestElements:
