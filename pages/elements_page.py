@@ -1,5 +1,5 @@
-from form_page_locators import Locators
-from base_page import BasePage
+from locators.form_page_locators import Locators
+from pages.base_page import BasePage
 
 
 class TextPages(BasePage):
@@ -23,7 +23,7 @@ class TextPages(BasePage):
         result = []
 
         for item in search:
-            self.element_is_clickable(self.locators.MAIN_PAGE).click()
+
             self.element_is_visible(self.locators.SEARCH_STRING).send_keys(item)
             self.element_is_clickable(self.locators.FIND_BUTTON).click()
             self.element_is_clickable(self.locators.FAVORITES_ADD).click()
@@ -31,6 +31,7 @@ class TextPages(BasePage):
             self.element_is_clickable(self.locators.FAVORITES_MENU).click()
             result.append(self.element_is_present(self.locators.FAVORITE_TITLE).text)
             self.element_is_clickable(self.locators.FAVORITE_DEL).click()
+            self.element_is_clickable(self.locators.MAIN_PAGE).click()
 
         return expected_result, result
 
@@ -43,7 +44,7 @@ class TextPages(BasePage):
         main_window = self.driver.current_window_handle
 
         for item in search:
-            self.element_is_visible(self.locators.MAIN_PAGE).click()
+
             self.element_is_visible(self.locators.SEARCH_STRING).send_keys(item)
             self.element_is_visible(self.locators.FIND_BUTTON).click()
             self.element_is_visible(self.locators.TITLE).click()
@@ -60,6 +61,7 @@ class TextPages(BasePage):
             self.element_is_visible(self.locators.FAVORITES_MENU).click()
             result.append(self.element_is_visible(self.locators.FAVORITE_NAME).text)
             self.element_is_visible(self.locators.FAVORITE_DEL).click()
+            self.element_is_visible(self.locators.MAIN_PAGE).click()
 
         return expected_result, result
 
