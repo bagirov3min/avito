@@ -79,6 +79,14 @@
    ```bash
    pip install -r requirements.txt# qa_automation
 
-2. Запустите тесты из файла test.py:
+2. Запустите тесты из файла elements_test.py:
     ```bash
     python elements_test.py
+   
+## Авторы
+
+Имя: Emin
+Фамилия: Bagirov
+GitHub: @bagirov3min (https://github.com/bagirov3min)
+Email: bagirov3min@gmail.com
+Telegram: @Emin_pro
