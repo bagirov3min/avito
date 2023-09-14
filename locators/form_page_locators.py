@@ -7,7 +7,7 @@ class Locators:
     title = random.randint(1, 40)
     SEARCH_STRING = (By.XPATH,
                      '//*[@id="app"]/div/div[3]/div/div[1]/div/div[3]/div[2]/div[1]/div/div/div/label[1]/input')
-    FIND_BUTTON = (By.CSS_SELECTOR, 'button[class="desktop-8ydzks"]')
+    FIND_BUTTON = (By.CSS_SELECTOR, 'button[class="desktop-15w37ob"]')
     TITLE = (By.XPATH,
              f'//*[@id="app"]/div/div[3]/div/div[2]/div[3]/div[3]/div[2]/div[2]/div[{title}]')
     FAVORITES_ADD = (By.XPATH, f'//*[@id="app"]/div/div[3]/div/div[2]/div[3]/div[3]/div[2]/div[2]/'
